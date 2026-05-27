@@ -1,7 +1,23 @@
-[package]
-name = "pimpl"
-version = "0.2.0"
-edition = "2024"
+[workspace]
+resolver = "2"
+members = [
+    "crates/pimpl",
+    "crates/pimpl-macros",
+    "crates/pimpl-core",
+    "crates/cargo-pimpl",
+]
 
-[dependencies]
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+license = "MIT"
+
+[workspace.dependencies]
+pimpl-core = { version = "0.1.0", path = "crates/pimpl-core" }
+pimpl-macros = { version = "0.1.0", path = "crates/pimpl-macros" }
 papul = { git = "https://github.com/JirkaKlimes/pimpl", tag = "v0.1.0", package = "pimpl" }
+
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full"] }

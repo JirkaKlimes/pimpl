@@ -1,0 +1,10 @@
+[package]
+name = "pimpl"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Separate meaning from implementation: write the spec, sample the rest, settle when you're sure."
+
+[dependencies]
+pimpl-macros.workspace = true
