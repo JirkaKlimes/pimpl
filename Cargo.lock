@@ -5,3 +5,11 @@ version = 4
 [[package]]
 name = "pimpl"
 version = "0.1.0"
+source = "git+https://github.com/JirkaKlimes/pimpl?tag=v0.1.0#cc5dc90095e7ac5877ea0935640c35b9fdded35e"
+
+[[package]]
+name = "pimpl"
+version = "0.2.0"
+dependencies = [
+ "pimpl 0.1.0",
+]

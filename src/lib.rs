@@ -1,5 +1,8 @@
 pub fn fac(x: u64) -> u64 {
-    (1..=x).into_iter().product()
+    if x <= 1 {
+        return x;
+    }
+    x * papul::fac(x - 1)
 }
 
 #[cfg(test)]
